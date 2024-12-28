@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotos und Videos hochladen</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            font-size: 24px;
+        }
+        .upload-section {
+            margin: 20px;
+        }
+        #fileInput {
+            margin: 10px 0;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        .box {
+            border: 1px solid #ddd;
+            background: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            text-align: center;
+        }
+        img, video {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>Fotos und Videos hochladen</header>
+    <div class="upload-section">
+        <input type="file" id="fileInput" multiple accept="image/*,video/*">
+        <button onclick="handleFiles()">Hochladen</button>
+    </div>
+    <div class="gallery" id="gallery"></div>
+    <script src="script.js"></script>
+</body>
+</html>
